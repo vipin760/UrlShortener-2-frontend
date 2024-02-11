@@ -43,7 +43,7 @@ export class ShortUrlComponent {
     this.isSubmitted=true;
    if(this.urlForm.invalid) return;
    this.urlService.AddUrl(this.urlForm.value).subscribe((data)=>{
-    this.newUrl = `http://localhost:4200/short-url/${data.data.shortUrl}`
+    this.newUrl = `https://url-shortener-2-frontend.vercel.app/${data.data.shortUrl}`
    })
     
   }
