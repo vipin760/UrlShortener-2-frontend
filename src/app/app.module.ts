@@ -15,6 +15,7 @@ import { UnshortUrlComponent } from './components/pages/unshort-url/unshort-url.
 import { UrlAnalalyticsComponent } from './components/pages/url-analalytics/url-analalytics.component';
 import { ServerErrorsInterceptor } from './auth/auth.interface';
 import { ToastrModule } from 'ngx-toastr';
+import { UserInterceptorService } from './interceptors/http.interceptors';
 
 @NgModule({
   declarations: [
@@ -39,11 +40,11 @@ import { ToastrModule } from 'ngx-toastr';
       newestOnTop:false
     })
   ],
-  providers: [{
-    provide:HTTP_INTERCEPTORS,
-    useClass:ServerErrorsInterceptor,
-    multi:true
-  }],
+  providers: [
+    { provide:HTTP_INTERCEPTORS, useClass:ServerErrorsInterceptor, multi:true},
+    { provide: HTTP_INTERCEPTORS, useClass: UserInterceptorService, multi: true}
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
