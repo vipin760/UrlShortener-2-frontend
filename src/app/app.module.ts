@@ -16,6 +16,7 @@ import { UrlAnalalyticsComponent } from './components/pages/url-analalytics/url-
 import { ServerErrorsInterceptor } from './auth/auth.interface';
 import { ToastrModule } from 'ngx-toastr';
 import { UserInterceptorService } from './interceptors/http.interceptors';
+import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { UserInterceptorService } from './interceptors/http.interceptors';
     FooterComponent,
     ShortUrlComponent,
     UnshortUrlComponent,
-    UrlAnalalyticsComponent
+    UrlAnalalyticsComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

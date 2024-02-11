@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/pages/home/home.component';
 import { ShortUrlComponent } from './components/pages/short-url/short-url.component';
 import { UnshortUrlComponent } from './components/pages/unshort-url/unshort-url.component';
 import { UrlAnalalyticsComponent } from './components/pages/url-analalytics/url-analalytics.component';
+import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 
 const routes: Routes = [
-  {path:'home', component:ShortUrlComponent },
-  {path:'short-url/:id', component:ShortUrlComponent },
+  {path:'', component:ShortUrlComponent },
+  {path:':id', component:ShortUrlComponent },
   {path:'short-url',component:ShortUrlComponent},
   {path:'unshort-url', component:UnshortUrlComponent}, 
   {path:'url-clicks-counter',component:UrlAnalalyticsComponent},
-  {path:'', redirectTo:'/home', pathMatch:'full'}
+  {path:'home', redirectTo:'/', pathMatch:'full'},
+  {path:'**',component:NotFoundComponent}
+  
 ];
 
 @NgModule({

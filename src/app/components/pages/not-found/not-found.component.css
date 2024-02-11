@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    justify-content: center;
+  }
+.container .content{
+    flex-wrap: wrap;
+    height: 50rem;
+    width: 50rem;
+  }
+.container .content .error-page{
+    width: 100%;
+} 
+
+@media (max-width:991px){
+  .container .content .error-page{
+    width:50%;
+  }
+}
