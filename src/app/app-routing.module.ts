@@ -7,13 +7,12 @@ import { NotFoundComponent } from './components/pages/not-found/not-found.compon
 
 const routes: Routes = [
   {path:'', component:ShortUrlComponent },
-  {path:':id', component:ShortUrlComponent },
   {path:'short-url',component:ShortUrlComponent},
   {path:'unshort-url', component:UnshortUrlComponent}, 
   {path:'url-clicks-counter',component:UrlAnalalyticsComponent},
   {path:'home', redirectTo:'/', pathMatch:'full'},
+  {path:':id', component:ShortUrlComponent },
   {path:'**',component:NotFoundComponent}
-  
 ];
 
 @NgModule({
