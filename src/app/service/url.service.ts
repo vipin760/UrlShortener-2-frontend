@@ -20,7 +20,6 @@ export class UrlService {
     return this.http.get<IUrlData_getUrl>(`${BASE_URI}/${url}`)
   }
   GetUnshortenUrl(url:string){
-    console.log(url);
     return this.http.get<IUrlData_getUrl>(`${BASE_URI}/un-short?id=${encodeURIComponent(url)}`)
   }
   

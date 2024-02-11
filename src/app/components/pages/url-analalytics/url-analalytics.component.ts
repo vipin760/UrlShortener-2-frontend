@@ -25,14 +25,10 @@ export class UrlAnalalyticsComponent implements OnInit{
  }
 
  get urlFormControl(){
-  console.log(this.urlForm.controls);
-  
   return this.urlForm.controls
  }
   submit(){
     this.isSubmitted=true
-    console.log(this.isSubmitted);
-    
     if(this.urlForm.invalid) return;
     this.urlService.GetAnalytics(this.urlForm.value.url).subscribe((data)=>{
       this.analyticsData = data.data
