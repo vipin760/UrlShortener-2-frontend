@@ -6,7 +6,7 @@
     <div class="row">
         <form [formGroup]="urlForm" (ngSubmit)="submit()">
             <input type="text" id="inputbox" class="box" placeholder="paste url" formControlName="url">
-            <button type="submit" class="btn">shrink url</button>
+            <button type="submit" class="btn">check count</button>
         </form>
     </div>
     <div *ngIf="urlFormControl['url'].errors&& isSubmitted">
