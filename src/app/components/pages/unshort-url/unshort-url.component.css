@@ -22,9 +22,14 @@
     padding-left: 2rem;
     border: var(--border);
 }
-.home p{
-    font-size: 100%;
-    line-height: 1.4;
+.home .content {
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+.home .content p{
+    text-align: start;
 }
 .home .btn-copy{
     background: #92ebc3;

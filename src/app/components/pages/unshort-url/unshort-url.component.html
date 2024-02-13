@@ -13,6 +13,8 @@
         <p *ngIf="urlFormControl['url'].errors['required']" style="color: red;">*empty value</p>
         <p *ngIf="urlFormControl['url'].errors['pattern']" style="color: red;">*plase check the url format</p>
     </div>
-    <p *ngIf="!oldUrl">we are providing unshortened url is completely free to use and general unshortened link to use create a making to easy to check</p>
+    <div class="content">
+        <p *ngIf="!oldUrl">we are providing unshortened url is completely free to use and general unshortened link to use create a making to easy to check</p>
     <p style="margin-top: 1rem;">{{oldUrl}}</p>
+    </div>
 </section>
