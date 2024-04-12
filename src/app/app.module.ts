@@ -17,6 +17,7 @@ import { ServerErrorsInterceptor } from './auth/auth.interface';
 import { ToastrModule } from 'ngx-toastr';
 import { UserInterceptorService } from './interceptors/http.interceptors';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
+import { VisitorsCountComponent } from './components/pages/visitors-count/visitors-count.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NotFoundComponent } from './components/pages/not-found/not-found.compon
     ShortUrlComponent,
     UnshortUrlComponent,
     UrlAnalalyticsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    VisitorsCountComponent
   ],
   imports: [
     BrowserModule,
